@@ -41,7 +41,7 @@ export default function MovieReviews() {
           <b>Sorry, something went wrong. Please try again later.</b>
         </div>
       )}
-      {movieReviews == [] ? (
+      {movieReviews.length > 0 ? (
         <ul>
           {movieReviews.map((review) => {
             return (

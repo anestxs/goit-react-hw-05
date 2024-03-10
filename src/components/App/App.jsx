@@ -34,17 +34,6 @@ function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>
-      {/* <Suspense fallback={<div>LOADING PAGE...</div>}>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/payments" element={<PaymentsPage />} />
-          <Route path="/payments/:paymentId" element={<PaymentDetailsPage />}>
-            <Route path="client" element={<ClientInfo />} />
-            <Route path="receipt" element={<PaymentReceipt />} />
-          </Route>
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-      </Suspense> */}
     </div>
   );
 }

@@ -41,7 +41,7 @@ export default function MovieCast() {
           <b>Sorry, something went wrong. Please try again later.</b>
         </div>
       )}
-      {movieCast == [] ? (
+      {movieCast.length > 0 ? (
         <ul>
           {movieCast.map((actor) => {
             return (

@@ -47,6 +47,7 @@ export const getMovieDetails = async (movieId) => {
 export const getMovieCast = async (movieId) => {
   try {
     const response = await axios.get(`/movie/${movieId}/credits`, options);
+    console.log(response.data.cast);
     return response.data.cast;
   } catch (error) {
     console.error(error);
@@ -56,6 +57,7 @@ export const getMovieCast = async (movieId) => {
 export const getMovieReviews = async (movieId) => {
   try {
     const response = await axios.get(`/movie/${movieId}/reviews`, options);
+    console.log(response.data.results);
     return response.data.results;
   } catch (error) {
     console.error(error);
