@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 
 export default function MovieReviews() {
   const { movieId } = useParams();
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
   const [movieReviews, setMovieReviews] = useState([]);
 
@@ -41,7 +41,9 @@ export default function MovieReviews() {
           <b>Sorry, something went wrong. Please try again later.</b>
         </div>
       )}
-      {movieReviews.length > 0 ? (
+      {movieReviews.length === 0 && !isLoading ? (
+        <b>We don`t have any reviews for this movie.</b>
+      ) : (
         <ul>
           {movieReviews.map((review) => {
             return (
@@ -52,8 +54,6 @@ export default function MovieReviews() {
             );
           })}
         </ul>
-      ) : (
-        <b>We don`t have any reviews for this movie.</b>
       )}
     </div>
   );

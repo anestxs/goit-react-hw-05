@@ -41,7 +41,9 @@ export default function MovieCast() {
           <b>Sorry, something went wrong. Please try again later.</b>
         </div>
       )}
-      {movieCast.length > 0 ? (
+      {movieCast.length === 0 && !isLoading ? (
+        <b>We don`t have any cast for this movie.</b>
+      ) : (
         <ul>
           {movieCast.map((actor) => {
             return (
@@ -59,8 +61,6 @@ export default function MovieCast() {
             );
           })}
         </ul>
-      ) : (
-        <b>We don`t have any cast for this movie.</b>
       )}
     </div>
   );
