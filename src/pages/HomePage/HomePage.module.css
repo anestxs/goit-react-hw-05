@@ -1,0 +1,10 @@
+.container {
+    padding-left: 15px;
+    padding-bottom: 25px;
+}
+
+.title {
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
